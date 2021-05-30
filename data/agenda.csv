@@ -1,0 +1,92 @@
+rowid,day_time,day,time,stage,title,speakers
+1,2021-06-04T09:00:00Z,June 4,9:00 AM,Nakamoto,Opening Remarks,Mayor Francis Suarez
+2,2021-06-04T09:40:00Z,June 4,9:40 AM,Nakamoto,Picturing The Hyperbitcoinized World,"Parker Lewis, Saifedean Ammous, Dan Held, Vijay Boyapati"
+3,2021-06-04T10:10:00Z,June 4,10:10 AM,Nakamoto,The History Of Money,Nick Szabo
+4,2021-06-04T10:40:00Z,June 4,10:40 AM,Nakamoto,Fireside: Michael Saylor And Max Keiser,Michael Saylor
+26,2021-06-04T11:00:00Z,June 4,11:00 AM,End Of Fiat,Crypto Garage (Virtual),Thibaut Le Guilly
+5,2021-06-04T11:10:00Z,June 4,11:10 AM,Nakamoto,The Milk Of Paradise: Bitcoin And The Western Canon,Allen Farrington
+27,2021-06-04T11:15:00Z,June 4,11:15 AM,End Of Fiat,"How Decentralization Dies, But Bitcoin Survives",Brandon Arvanaghi
+15,2021-06-04T11:15:00Z,June 4,11:15 AM,Stacking Sats,The Bitcoin Stack,Dhruv Bansal
+28,2021-06-04T11:30:00Z,June 4,11:30 AM,End Of Fiat,Hito Wallet Demo,Mike Kirillov
+6,2021-06-04T11:30:00Z,June 4,11:30 AM,Nakamoto,Investing In The Bitcoin Ecosystem,Olaf Carlson-Wee
+16,2021-06-04T11:40:00Z,June 4,11:40 AM,Stacking Sats,How To Activate Taproot And Future Soft Forks,Matt Corallo
+29,2021-06-04T11:45:00Z,June 4,11:45 AM,End Of Fiat,Institutionalization Of Mining,Mike Colyer
+7,2021-06-04T12:00:00Z,June 4,12:00 PM,Nakamoto,Fireside: Winklevoss Twins And Pomp,Cameron And Tyler Winklevoss
+30,2021-06-04T12:15:00Z,June 4,12:15 PM,End Of Fiat,Tlon / Urbit,Christian Langalis
+17,2021-06-04T12:15:00Z,June 4,12:15 PM,Stacking Sats,Bitcoin's Transition To A Multilayer Ecosystem,Wiz
+8,2021-06-04T12:25:00Z,June 4,12:25 PM,Nakamoto,Banking The Unbanked,Jack Dorsey
+31,2021-06-04T12:30:00Z,June 4,12:30 PM,End Of Fiat,Sapio Presentation,Jeremy Rubin
+18,2021-06-04T12:40:00Z,June 4,12:40 PM,Stacking Sats,Building Lightning Businesses,Jack Mallers
+32,2021-06-04T13:00:00Z,June 4,1:00 PM,End Of Fiat,Lunch,NA
+9,2021-06-04T13:00:00Z,June 4,1:00 PM,Nakamoto,Lunch,NA
+19,2021-06-04T13:10:00Z,June 4,1:10 PM,Stacking Sats,Who Is A Bitcoiner?,Nimrod Lehavi
+33,2021-06-04T13:30:00Z,June 4,1:30 PM,End Of Fiat,Drivechain Demo,Paul Sztorc
+20,2021-06-04T13:40:00Z,June 4,1:40 PM,Stacking Sats,"Bitcoin, Lightning And The Future Of The Creator Economy",BLOND:ISH
+34,2021-06-04T13:45:00Z,June 4,1:45 PM,End Of Fiat,The Next 10 Years Of Bitcoin Mining,Edward Evenson
+10,2021-06-04T13:45:00Z,June 4,1:45 PM,Nakamoto,Supporting Innovation From Inside The System,Chris Giancarlo
+35,2021-06-04T14:00:00Z,June 4,2:00 PM,End Of Fiat,Bitcoin's Path Of Creative Destruction,Guy Swann
+21,2021-06-04T14:10:00Z,June 4,2:10 PM,Stacking Sats,Lunch,NA
+36,2021-06-04T14:15:00Z,June 4,2:15 PM,End Of Fiat,Introducing The Lolli App,Aubrey Strobel
+11,2021-06-04T14:20:00Z,June 4,2:20 PM,Nakamoto,What To Do When Your Country Bans Bitcoin,Alejandro Machado
+37,2021-06-04T14:30:00Z,June 4,2:30 PM,End Of Fiat,Allan Stevo,Allan Stevo
+22,2021-06-04T14:30:00Z,June 4,2:30 PM,Stacking Sats,Gamifying BTC,Simon Cowell
+38,2021-06-04T15:00:00Z,June 4,3:00 PM,End Of Fiat,Ballet Wallet,Bobby Lee
+23,2021-06-04T15:00:00Z,June 4,3:00 PM,Stacking Sats,Growing Lightning Infrastructure,Lisa Neigut
+12,2021-06-04T15:05:00Z,June 4,3:05 PM,Nakamoto,Bitcoin Makes The Laws,Teana Baker-Taylor
+39,2021-06-04T15:15:00Z,June 4,3:15 PM,End Of Fiat,Talos,Justin Schmidt
+40,2021-06-04T15:30:00Z,June 4,3:30 PM,End Of Fiat,Smart Contracts On Liquid,Andrew Poelstra
+24,2021-06-04T15:30:00Z,June 4,3:30 PM,Stacking Sats,Bitcoin Is DeFi,Oswaldo Lairet
+13,2021-06-04T15:35:00Z,June 4,3:35 PM,Nakamoto,Bringing Bitcoin Innovation Home To America,Senator Cynthia Lummis
+41,2021-06-04T16:00:00Z,June 4,4:00 PM,End Of Fiat,Titan Presentation,Ryan Condron
+25,2021-06-04T16:00:00Z,June 4,4:00 PM,Stacking Sats,OG Dev Stories,Eric Lombrozo
+42,2021-06-04T16:15:00Z,June 4,4:15 PM,End Of Fiat,The Bitcoin Anti-ETF,Jesse Proudman
+43,2021-06-04T16:30:00Z,June 4,4:30 PM,End Of Fiat,Tommy And Scarce City,Tommy
+14,2021-06-04T16:40:00Z,June 4,4:40 PM,Nakamoto,Break For Happy Hour,NA
+44,2021-06-05T09:00:00Z,June 5,9:00 AM,Nakamoto,Welcome And Opening Remarks,Miami-Dade County Commissioner
+45,2021-06-05T09:10:00Z,June 5,9:10 AM,Nakamoto,The Bitcoin Macro Landscape,Preston Pysh
+46,2021-06-05T09:45:00Z,June 5,9:45 AM,Nakamoto,When A Counterculture Goes Mainstream,Tony Hawk
+75,2021-06-05T10:00:00Z,June 5,10:00 AM,End Of Fiat,Tony Hawk Demo,Tony Hawk
+60,2021-06-05T10:00:00Z,June 5,10:00 AM,Stacking Sats,Tony Hawk Demo,Tony Hawk
+47,2021-06-05T10:15:00Z,June 5,10:15 AM,Nakamoto,Tony Hawk Demo,Tony Hawk
+76,2021-06-05T10:45:00Z,June 5,10:45 AM,End Of Fiat,Bitstamp Presentation (HIDDEN),Julian Sawyer
+61,2021-06-05T10:45:00Z,June 5,10:45 AM,Stacking Sats,Building The Bitcoin Circular Economy,Alex Adelman
+48,2021-06-05T10:50:00Z,June 5,10:50 AM,Nakamoto,Panel: Mining As A Public Company,Frank Holmes
+77,2021-06-05T11:00:00Z,June 5,11:00 AM,End Of Fiat,WTF Happened In 1971?,Heavily Armed Clown
+49,2021-06-05T11:15:00Z,June 5,11:15 AM,Nakamoto,The Moral Case For Bitcoin,Guy Hirsch
+62,2021-06-05T11:15:00Z,June 5,11:15 AM,Stacking Sats,Proof Of Reserves,Noah Buxton
+78,2021-06-05T11:30:00Z,June 5,11:30 AM,End Of Fiat,Cross-Border Bitcoin Trends: East Vs. West,Ciara Sun
+50,2021-06-05T11:40:00Z,June 5,11:40 AM,Nakamoto,Onboarding One Billion Bitcoiners,Ivan Soto-Wright
+74,2021-06-05T11:45:00Z,June 5,11:45 AM,End Of Fiat,Are Bitcoin Banks Special?,Jason Brett
+63,2021-06-05T11:45:00Z,June 5,11:45 AM,Stacking Sats,How NOT To Lose Your Bitcoin,Lawrence Nahum
+80,2021-06-05T12:00:00Z,June 5,12:00 PM,End Of Fiat,MASF Presentation,Alejandro De La Torre
+79,2021-06-05T12:00:00Z,June 5,12:00 PM,End Of Fiat,Sai Tech Presentation,Li Li
+51,2021-06-05T12:10:00Z,June 5,12:10 PM,Nakamoto,"Bitcoin For Billions, Not Billionaires",Elizabeth Stark
+81,2021-06-05T12:15:00Z,June 5,12:15 PM,End Of Fiat,How To NOT Pay Taxes On Your Bitcoin,Adam Bergman
+64,2021-06-05T12:15:00Z,June 5,12:15 PM,Stacking Sats,Is It Possible To Time The Market,Joel Birch
+82,2021-06-05T12:30:00Z,June 5,12:30 PM,End Of Fiat,OKcoin Presentation,Haider Rafique
+52,2021-06-05T12:40:00Z,June 5,12:40 PM,Nakamoto,Fireside: Novogratz And Cascarilla,Mike Novogratz
+83,2021-06-05T12:45:00Z,June 5,12:45 PM,End Of Fiat,Prison Reform,Alice Marie Johnson
+65,2021-06-05T12:45:00Z,June 5,12:45 PM,Stacking Sats,On-Chain Analytics: Signal Vs. Noise,Ria Bhutoria
+84,2021-06-05T13:00:00Z,June 5,1:00 PM,End Of Fiat,Lunch,NA
+53,2021-06-05T13:10:00Z,June 5,1:10 PM,Nakamoto,Lunch,NA
+66,2021-06-05T13:15:00Z,June 5,1:15 PM,Stacking Sats,Lunch,NA
+71,2021-06-05T13:30:00Z,June 5,1:30 PM,End Of Fiat,Making Texas Bitcoin-Forward,Lee Bratcher
+67,2021-06-05T13:30:00Z,June 5,1:30 PM,Stacking Sats,"State Of Bitcoin Mining (East, West And Everything In Between)",Amanda Fabiano
+54,2021-06-05T13:40:00Z,June 5,1:40 PM,Nakamoto,Pay Me In Bitcoin,Ghazi
+85,2021-06-05T13:45:00Z,June 5,1:45 PM,End Of Fiat,ION - We Have Liftoff,Daniel Buchner
+86,2021-06-05T14:00:00Z,June 5,2:00 PM,End Of Fiat,The Rise Of Sovereignism,Robert Breedlove
+55,2021-06-05T14:05:00Z,June 5,2:05 PM,Nakamoto,Giving Back To Bitcoin,Hong Fang
+72,2021-06-05T14:15:00Z,June 5,2:15 PM,End Of Fiat,Bitcoin Vaults,Kevin Loaec
+87,2021-06-05T14:15:00Z,June 5,2:15 PM,End Of Fiat,The Ultimate Bull Case For Bitcoin,Vijay Boyapati
+68,2021-06-05T14:15:00Z,June 5,2:15 PM,Stacking Sats,"Pools (Past, Present, Future)",Pavel Moravec
+56,2021-06-05T14:35:00Z,June 5,2:35 PM,Nakamoto,Fireside: Steve Lee And Aaron van Wirdum,Steve Lee
+73,2021-06-05T15:00:00Z,June 5,3:00 PM,End Of Fiat,Patrick Byrne,Patrick Byrne
+69,2021-06-05T15:00:00Z,June 5,3:00 PM,Stacking Sats,How To Build A (Profitable) Bitcoin Mine,Dave Perrill
+57,2021-06-05T15:10:00Z,June 5,3:10 PM,Nakamoto,"Toxic Maximalism: A Feature, Not A Bug",Dr. Bitcoin MD
+88,2021-06-05T15:30:00Z,June 5,3:30 PM,End Of Fiat,Financial Freedom Is Not Personal Freedom - Secure Your Ultimate Liberty With A Second Residency Or Citizenship,Michael Cobb
+58,2021-06-05T15:35:00Z,June 5,3:35 PM,Nakamoto,Evolution Of Exchanges,Caitlin Long
+89,2021-06-05T15:45:00Z,June 5,3:45 PM,End Of Fiat,FTX,Zane Tackett
+70,2021-06-05T15:45:00Z,June 5,3:45 PM,Stacking Sats,Bitcoin Mining Fixes Our Energy Problems,Marty Bent
+90,2021-06-05T16:00:00Z,June 5,4:00 PM,End Of Fiat,FutureBit,John Stefanopoulos
+91,2021-06-05T16:30:00Z,June 5,4:30 PM,End Of Fiat,Tommy/Scarce City/Artists,NA
+59,2021-06-05T16:40:00Z,June 5,4:40 PM,Nakamoto,Break For Happy Hour,NA

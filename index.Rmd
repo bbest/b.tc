@@ -1,0 +1,149 @@
+---
+title: "index"
+author: "Ben Best"
+date: "5/30/2021"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    code_folding: hide
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, warning = F, message = F)
+```
+
+## Speakers
+
+```{r}
+librarian::shelf(
+  dplyr, glue, googlesheets4, purrr, rvest, stringr, tibble)
+
+dir_data <- here::here("data")
+speakers_url <- "https://b.tc/conference/speakers"
+gs_url <- "https://docs.google.com/spreadsheets/d/1pV1k6sOY84asN_MkQLkgjBx2nAs4mm_Vk4Wp0UrHdFQ/edit"
+speakers_csv <- file.path(dir_data, "speakers.csv")
+
+dir.create(dir_data, showWarnings = F)
+
+speakers_gs <- read_sheet(gs_url, "Speakers")
+
+speakers_xml <- read_html(speakers_url)
+
+keynotes_xml <- speakers_xml %>% html_elements(".keynote-speaker")
+keynotes <- tibble(
+  name         = keynotes_xml %>% html_element(".h2") %>% html_text2(),
+  role         = keynotes_xml %>% html_element(".h3") %>% html_text2(),
+  role_2       = keynotes_xml %>% html_element(".speaker-conftitle") %>% html_text2(),
+  link         = keynotes_xml %>% html_element(".speaker-link") %>%  html_attr("href"),
+  description  = keynotes_xml %>% html_element("p") %>% html_text2(),
+  headshot_url = keynotes_xml %>% html_element(".speaker-headshot") %>% html_attr("style") %>% 
+    str_replace('background-image:url\\("(.*)"\\)', "\\1"))
+
+featured_xml <- speakers_xml %>% html_elements(".speaker-card")
+featured <- tibble(
+  name_first   = featured_xml %>% html_element(".speaker-namefirst") %>% html_text2(),
+  name_last    = featured_xml %>% html_element(".speaker-namelast") %>% html_text2(),
+  role         = featured_xml %>% html_element(".speaker-conftitle") %>% html_text2(),
+  link         = featured_xml %>% html_element(".speaker-link") %>%  html_attr("href"),
+  headshot_url = featured_xml %>% html_element("[style^='background-image']") %>% html_attr("style") %>% 
+    str_replace('background-image:url\\("(.*)"\\)', "\\1"))
+
+speakers <- bind_rows(
+  keynotes %>% 
+    mutate(
+      name_pfx    = map_chr(name, function(x){
+        # x = "Senator Cynthia Lummis"
+        pts <- str_split(x, " ", simplify = T)
+        if (length(pts) == 3)
+          return(pts[1])
+        NA}),
+      name_first  = map_chr(name, function(x){
+        # x = "Senator Cynthia Lummis"
+        pts <- str_split(x, " ", simplify = T)
+        if (length(pts) == 3)
+          return(pts[2])
+        pts[1]}),
+      name_last   = map_chr(name, function(x){
+        # x = "Senator Cynthia Lummis"
+        pts <- str_split(x, " ", simplify = T)
+        if (length(pts) == 3)
+          return(pts[3])
+        pts[2]}),
+      type        = "_keynote",
+      description = paste0(role_2, ". ", description)) %>% 
+    select(-name, -role_2),
+  featured %>% 
+    mutate(
+      type = "featured")) %>% 
+  select(
+    type, 
+    name_pfx, name_first, name_last, 
+    role, description, headshot_url) %>% 
+  arrange(type, name_last, name_first) %>% 
+  rowid_to_column("rowid") %>% 
+  relocate(rowid)
+
+# speakers_0 <- speakers # speakers <- speakers_0
+lttr <- LETTERS[which(names(speakers) == "headshot_url")]
+speakers <- speakers %>% 
+  mutate(
+    headshot = glue("=IMAGE({lttr}{rowid + 1})"))
+speakers$headshot <- gs4_formula(speakers$headshot)
+
+#View(speakers)
+readr::write_csv(speakers, speakers_csv)
+
+sheet_write(speakers, gs_url, "Speakers")
+
+DT::datatable(speakers)
+```
+
+
+## Agenda
+
+```{r}
+agenda_url <- "https://b.tc/conference/agenda"
+agenda_csv <- file.path(dir_data, "agenda.csv")
+
+agenda_xml <- read_html(agenda_url)
+
+cards_xml <- agenda_xml %>% html_elements(".agenda-card")
+agenda <- tibble(
+  time  = cards_xml %>% html_element(".time") %>% html_text2(),
+  title = cards_xml %>% html_element(".h4") %>% html_text2(),
+  stage = cards_xml %>% html_element(".agenda-infobox>.p:last-child") %>% 
+    html_text2() %>% str_replace(" Stage", "")) %>% 
+  rowid_to_column("rowid") %>% 
+  mutate(
+    speakers = map_chr(rowid, function(i){ # i = 2
+      html_element(cards_xml[[i]], "p") %>% html_text2() %>% 
+        str_trim() %>% 
+        str_replace_all("\n", ", ")}),
+    speakers = ifelse(
+      speakers == time,
+      NA,
+      speakers))
+
+i_day2 <- which(agenda$title == "Welcome And Opening Remarks")
+agenda <- agenda %>% 
+  mutate(
+    day= c(
+      rep("June 4", i_day2 - 1), 
+      rep("June 5", nrow(agenda) - i_day2 + 1)),
+    day_time = glue("{day} {time}") %>%
+      strptime("%B %d %I:%M %p", tz="GMT") %>% # tz="US/Eastern"
+      as.POSIXct()) %>% 
+  select(rowid, day_time, day, time, stage, title, speakers) %>% 
+  arrange(day_time, stage, title)
+    
+readr::write_csv(agenda, agenda_csv)
+
+sheet_write(agenda, gs_url, "Agenda")
+
+DT::datatable(agenda)
+```
+
